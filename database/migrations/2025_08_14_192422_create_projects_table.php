@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('company_id')->constrained('companies', 'id')->onDelete('cascade');
             $table->foreignId('client_id')->nullable()->constrained('guests','id')->onDelete('cascade');
-            $table->string('naem')->nullable();
+            $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->string('live_url')->nullable();
             $table->text('img_logo')->nullable();
+            $table->string('img_size')->nullable();
             $table->decimal('totel_price',10,2)->nullable();
             $table->decimal('payment',10,2)->nullable();
             $table->decimal('due',10,2)->nullable();

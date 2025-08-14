@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreignId('assigned_to')->constrained('employees','id')->onDelete('cascade');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
+            $table->text('img_url')->nullable();
+            $table->string('file_size')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->enum('status',['pending','in_progress','completed'])->default('pending');
