@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')->nullable()->constrained( 'companies','id')->onDelete('cascade');
-            $table->string('name')->nullable();
-            $table->text('description')->nullable();
+            $table->foreignId('company_id')->constrained('companies', 'id')->onDelete('cascade');
+            $table->foreignId('uploaded_by')->constrained('employees','id')->onDelete('cascade');
+            $table->text('file_path')->nullable();
+            $table->bigInteger('file_size')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('files');
     }
 };

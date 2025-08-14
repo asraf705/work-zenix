@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('package_features', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('package_id')->constrained('packages')->onDelete('cascade');
+            $table->foreignId('package_id')->constrained('packages','id')->onDelete('cascade');
             $table->string('feature_key')->nullable();
             $table->text('feature_value')->nullable();
             $table->timestamps();

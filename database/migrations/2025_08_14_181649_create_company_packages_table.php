@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('company_packages', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('package_id')->constrained('packages')->onDelete('cascade');
-            $table->foreignId('company_id')->constrained(table: 'companies')->onDelete('cascade');
+            $table->foreignId('package_id')->constrained('packages', 'id')->onDelete('cascade');
+            $table->foreignId('company_id')->constrained('companies', 'id')->onDelete('cascade');
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->decimal('price', 10, 2)->nullable();

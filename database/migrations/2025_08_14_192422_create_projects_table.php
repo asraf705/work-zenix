@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')->constrained(table: 'companies')->onDelete('cascade');
-            $table->foreignId('client_id')->nullable()->constrained(table:'guests')->onDelete('cascade');
+            $table->foreignId('company_id')->constrained('companies', 'id')->onDelete('cascade');
+            $table->foreignId('client_id')->nullable()->constrained('guests','id')->onDelete('cascade');
             $table->string('naem')->nullable();
             $table->text('description')->nullable();
             $table->string('live_url')->nullable();
+            $table->text('img_logo')->nullable();
             $table->decimal('totel_price',10,2)->nullable();
             $table->decimal('payment',10,2)->nullable();
             $table->decimal('due',10,2)->nullable();
