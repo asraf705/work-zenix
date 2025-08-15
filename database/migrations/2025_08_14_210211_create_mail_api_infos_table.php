@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('company_id')->constrained('companies', 'id')->onDelete('cascade');
             $table->string('mailer')->nullable();
-            $table->string('host')->nullable();
-            $table->integer('port')->nullable();
+            $table->string('input_host')->nullable();
+            $table->string('output_host')->nullable();
+            $table->integer('input_port')->nullable();
+            $table->integer('output_port')->nullable();
             $table->string('username')->nullable()->unique();
             $table->string('password')->nullable();
             $table->string('encryption')->nullable();
