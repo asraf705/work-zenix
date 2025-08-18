@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->string('user_ip')->nullable()->unique();
             $table->string('device_fingerprint')->nullable()->unique();
+            $table->string('is_active')->defult(1);  
             $table->timestamps();
         });
 
