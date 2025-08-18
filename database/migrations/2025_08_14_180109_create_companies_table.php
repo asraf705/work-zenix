@@ -24,7 +24,6 @@ return new class extends Migration
             $table->string('users_limit')->nullable();
             $table->string('mail_acc_used')->nullable();
             $table->string('mail_acc_limit')->nullable();
-            $table->string('users_limit')->nullable();
             $table->string('storage_used')->nullable();
             $table->string('storage_limit')->nullable();
             $table->time('office_start')->nullable();

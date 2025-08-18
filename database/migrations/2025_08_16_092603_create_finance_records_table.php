@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('category_id')->nullable()->constrained('finance_categories','id')->onDelete('cascade');
             $table->foreignId('project_id')->nullable()->constrained('projects','id')->onDelete('cascade');
             $table->string('name')->nullable();
-            $table->enm('type',['income','expense','transfer'])->nullable();
+            $table->string('type')->nullable()->comment('income,expense,transfer');
             $table->string('currency')->nullable();
             $table->decimal('amount', 10, 2)->nullable();
             $table->text('description')->nullable();

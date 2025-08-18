@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('password');
-            $table->foreignId('role_id')->nullable()->constrained('roles', 'id')->onDelete('cascade');
+            $table->foreignId('role_id')->nullable();
             $table->date('joining_date')->nullable()->comment('Date when employee joined the company');
             $table->date('resign_date')->nullable()->comment('Date when employee resigned from the company');
             $table->decimal('monthly_salary',10,2)->nullable();
