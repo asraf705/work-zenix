@@ -5,10 +5,10 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Log;
+use App\Mail\SuspiciousLoginNotification;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
@@ -157,7 +157,7 @@ class SuperAdminAccess
         return $next($request);
     }
 
-    
+
     // -------- Session Logging Helper --------
     protected function logSession($userId, $sessionId, $event, $ip, $agent)
     {

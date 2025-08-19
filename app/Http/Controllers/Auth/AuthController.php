@@ -30,7 +30,7 @@ class AuthController extends Controller
             'password'           => bcrypt($request->password),
             'device_fingerprint' => $fingerprint,
             'user_ip'            => $ip,
-            'is_active'          => true,
+            'is_active'          => 0,
         ]);
 
         Auth::login($user);
