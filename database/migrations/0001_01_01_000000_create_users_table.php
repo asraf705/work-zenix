@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->string('user_ip')->nullable();
             $table->string('device_fingerprint')->nullable();;
-            $table->string('is_active')->defult(1);
+            $table->string('is_active')->defult(0)->comment('1:admin,2:dev,3:manager,0:blocked');
             $table->unique(['id', 'device_fingerprint'], 'user_device_unique');
             $table->timestamps();
         });
@@ -38,10 +38,12 @@ return new class extends Migration
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->foreignId('user_id')->nullable()->index();
+            $table->string('event_type')->comment('blocked,kicked,success');
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
             $table->longText('payload');
             $table->integer('last_activity')->index();
+            $table->timestamps();
         });
     }
 
