@@ -1,4 +1,3 @@
-markdown
 # 🚀 WorkZenix – SaaS ERP & Work Management Platform
 
 WorkZenix is a **next-generation SaaS-based ERP and Work Management System** built with **Laravel + React**.  
@@ -140,5 +139,3 @@ For support or inquiries: **[support@workzenix.com](mailto:support@workzenix.com
 Name: MD ASRAFUZZAMAN 
 Mobile: 01314924003
 Email: **[asrafuzzaman705@gamil.com](mailto:asrafuzzaman705@gamil.com)**
-
-```
