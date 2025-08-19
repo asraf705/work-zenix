@@ -1,6 +1,3 @@
-Got it 👍 You want the **actual `README.md` code** for your Git repo (not just the explanation).
-Here’s a professional `README.md` template for your project **WorkZenix**:
-
 ```markdown
 # 🚀 WorkZenix – SaaS ERP & Work Management Platform
 
@@ -137,9 +134,11 @@ WorkZenix is licensed under the **MIT License**.
 
 For support or inquiries: **[support@workzenix.com](mailto:support@workzenix.com)**
 
-```
-
 ---
 
-👉 Do you want me to also **auto-generate this README.md file into your project folder** (like I did with `.sql` and `.rtf`) so you can download it directly?
+## Auther
+Name: MD ASRAFUZZAMAN 
+Mobile: 01314924003
+Email: **[asrafuzzaman705@gamil.com](mailto:asrafuzzaman705@gamil.com)**
+
 ```
