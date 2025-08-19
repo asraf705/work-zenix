@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\SuperAdminAccess;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Auth\AuthController;
 
 
 Route::get('/', function () {
@@ -18,6 +18,9 @@ Route::middleware([SuperAdminAccess::class])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+
+     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
 // Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])->group(function () {
