@@ -1,13 +1,13 @@
-# 🚀 WorkZenix – SaaS ERP & Work Management Platform
+#  WorkZenix – SaaS ERP & Work Management Platform
 
 WorkZenix is a **next-generation SaaS-based ERP and Work Management System** built with **Laravel + React**.  
 It is designed to empower businesses with **Finance, HR, Project Management, CRM, POS, Inventory, and AI-powered features** – all in one platform.
 
 ---
 
-## 📌 Features
+##  Features
 
-### 🔑 Core Modules
+###  Core Modules
 - **User & Role Management** – Multi-tenant support, custom roles, permissions.
 - **Project Management** – Tasks, deadlines, budgets, Gantt charts, Kanban boards.
 - **Finance & Accounting**  
@@ -27,7 +27,7 @@ It is designed to empower businesses with **Finance, HR, Project Management, CRM
 
 ---
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 - **Backend**: Laravel 12 (PHP 8+)
 - **Frontend**: React + Vite + TailwindCSS + MUI
@@ -38,7 +38,7 @@ It is designed to empower businesses with **Finance, HR, Project Management, CRM
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 
@@ -55,15 +55,15 @@ WorkZenix/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-### 1️⃣ Clone Repository
+### Clone Repository
 ```bash
 git clone https://github.com/yourusername/workzenix.git
 cd workzenix
 ````
 
-### 2️⃣ Backend Setup (Laravel)
+### Backend Setup (Laravel)
 
 ```bash
 cd backend
@@ -74,7 +74,7 @@ php artisan migrate --seed
 php artisan serve
 ```
 
-### 3️⃣ Frontend Setup (React)
+### Frontend Setup (React)
 
 ```bash
 cd frontend
@@ -82,7 +82,7 @@ npm install
 npm run dev
 ```
 
-### 4️⃣ Run with Docker (Optional)
+### Run with Docker (Optional)
 
 ```bash
 docker-compose up -d
@@ -90,7 +90,7 @@ docker-compose up -d
 
 ---
 
-## 🔐 Security Features
+## Security Features
 
 * Role-Based Access Control (RBAC)
 * Device Fingerprinting & IP Checks
@@ -100,14 +100,14 @@ docker-compose up -d
 
 ---
 
-## 📊 Database Schema (Finance Example)
+## Database Schema (Finance Example)
 
 ---
 # MYSQL
 
 ---
 
-## 📈 Roadmap
+## Roadmap
 
 * [x] Core ERP Modules
 * [x] Finance & Accounting
@@ -117,19 +117,19 @@ docker-compose up -d
 
 ---
 
-## 👥 Contributing
+## Contributing
 
 Pull requests are welcome. Please fork the repo and submit your changes via PR.
 
 ---
 
-## 📜 License
+## License
 
 WorkZenix is licensed under the **MIT License**.
 
 ---
 
-## 📧 Contact
+## Contact
 
 For support or inquiries: **[support@workzenix.com](mailto:support@workzenix.com)**
 
