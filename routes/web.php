@@ -1,13 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\SecureUserSession;
+use App\Http\Middleware\SuperAdminAccess;
+use App\Http\Controllers\AuthController;
+
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([SecureUserSession::class])->group(function () {
+
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+
+Route::middleware([SuperAdminAccess::class])->group(function () {
     // Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/dashboard', function () {
         return view('dashboard');
