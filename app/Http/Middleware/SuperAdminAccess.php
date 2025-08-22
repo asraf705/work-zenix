@@ -41,6 +41,8 @@ class SuperAdminAccess
         return $next($request);
     }
 
+    
+
     // -------- Login Logic --------
     protected function handleLogin(Request $request)
     {

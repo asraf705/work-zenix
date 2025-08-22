@@ -25,9 +25,12 @@ class AuthController extends Controller
     // -------- REGISTER --------
     public function register(Request $request)
     {
+
+        dd($request->all());
         $request->validate([
             'name'     => 'required|string|max:255',
             'email'    => 'required|string|email|max:255|unique:users',
+            'phone'    => 'required|string|number|accepted|unique:user',
             'password' => 'required|string|min:6|confirmed',
         ]);
 
@@ -38,6 +41,7 @@ class AuthController extends Controller
         $user = User::create([
             'name'               => $request->name,
             'email'              => $request->email,
+            'phone'              => $request->phone,
             'password'           => bcrypt($request->password),
             'device_fingerprint' => $fingerprint,
             'user_ip'            => $ip,

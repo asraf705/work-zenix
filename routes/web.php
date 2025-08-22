@@ -9,10 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login',[AuthController::class,'loginFrom'])->name('login');
-Route::get('/register',[AuthController::class,'registerFrom'])->name('register');
-Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/auth-login',[AuthController::class,'loginFrom'])->name('login');
+Route::get('/auth-register',[AuthController::class,'registerFrom'])->name('register');
+Route::post('/auth-login', [AuthController::class, 'login'])->name('auth.login');
+Route::post('/auth-register', [AuthController::class, 'register'])->name('auth.register');
 
 Route::middleware([SuperAdminAccess::class])->group(function () {
     // Route::get('/dashboard', [DashboardController::class, 'index']);
