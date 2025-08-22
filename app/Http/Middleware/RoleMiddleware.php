@@ -20,7 +20,7 @@ class RoleMiddleware
             return response()->json(['message' => 'Unauthorized.'], 401);
         }
 
-        $userRole = Auth::user()->user_role; // 1:admin, 2:dev, 3:manager , 0:block
+        $userRole = Auth::user()->user_role; 
 
         if (!in_array($userRole, $roles)) {
             return response()->json(['message' => 'Forbidden: insufficient role.'], 403);
